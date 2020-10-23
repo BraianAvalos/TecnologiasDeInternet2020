@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Suma</title>
+</head>
+
+<body>
+	<input type="number" name="texto" id="num1">
+	<input type="number" name="texto" id="num2">
+	<button type="button" id="btn1">click</button>
+	<script>
+	var btn = document.getElementById("btn1");
+	btn.addEventListener("click",()=>{
+		var a =document.getElementById("num1").value;
+		var b =document.getElementById("num2").value;
+		var sum= parseInt(a)+parseInt(b);
+	alert("El valor del input es "+sum);
+	})
+	
+	</script>
+		
+	
+</body>
+</html>
