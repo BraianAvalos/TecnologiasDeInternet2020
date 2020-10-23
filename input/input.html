@@ -6,18 +6,17 @@
 </head>
 
 <body>
+	<input type="text" name="texto" id="txt" >
+	<button type="button" id="btn1">click</button>
+	<script>
+	var btn = document.getElementById("btn1");
+	btn.addEventListener("click",()=>{
+		var a =document.getElementById("txt").value;
+	alert("El valor del input es "+a);
+	})
 	
-	<p id="demo"></p>
-	<button type="button" onClick=cambiarTexto()>click</button>
-	<script>document.getElementById("demo").innerHTML
-	function cambiarTexto(){
-	document.getElementById("demo")
-	alert("ALTO, es una alerta")
-	
-	}
-		
-		
 	</script>
+		
 	
 </body>
 </html>
