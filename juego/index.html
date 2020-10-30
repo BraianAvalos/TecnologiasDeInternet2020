@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div>
+        <center><div class="grid-container">
+            <div class="grid-item"><h2 style="padding-right: 50px;" id="win">Ganadas:</h3></div>
+               <div class="grid-item"><h2 style="padding-left: 50px;" id="empate">Empate:</h3></div> 
+                <div class="grid-item"><h2 style="padding-left: 50px;" id="lose">Perdidas:</h3></div>
+                
+          
+        </div></center>
+    </div>
+    <div>
+        <h1>Elige</h1>
+            <center><div class="grid-container">
+                <div class="grid-item" ><img src="imagenes/piedra.png" alt="piedra" id="piedra" class="zoom" > </div>
+                <div class="grid-item"><img src="Imagenes/papel.png" alt="papel" id="papel" class="zoom"></div>
+                <div class="grid-item"><img src="imagenes/tijera.png" alt="tijera" id="tijera"class="zoom"></div>
+            </div></center>
+    </div>
+    <h1>VS</h1>
+    <div>
+        <center>
+            <img src="imagenes/incognita.png" alt="incognita" id="rival" style="padding: 50px;">
+        </center>
+    </div>
+  
+    <script>
+        var btn =document.getElementById("btn");
+        var wins = document.getElementById("win");
+        var lose = document.getElementById("lose");
+        var empa =document.getElementById("empate");
+        var imgPiedra=document.getElementById("piedra");
+        var imgPapel =document.getElementById("papel");
+        var imgTijera= document.getElementById("tijera");
+        
+        
+        var select;
+        var winsNum=0;
+        var loseNum=0;
+        var empateNum=0;
+        imgPiedra.addEventListener("click",()=>{
+            var num=Math.floor(Math.random()*3)
+            select=1;
+            juegoPiedra(num)
+            rival(num);
+        })
+        imgPapel.addEventListener("click",()=>{
+           var num=Math.floor(Math.random()*3)
+            select=1;
+            juegoPapel(num)
+            rival(num);
+        })
+        imgTijera.addEventListener("click",()=>{
+            var num=Math.floor(Math.random()*3)
+            select=1;
+            juegoTijera(num)
+            rival(num);
+        })
+        
+        function juegoPiedra(numR){
+            
+            if(numR==select){
+                empateNum++;
+                empa.innerHTML="Empate: "+empateNum;
+            }else if(numR==1){
+                loseNum++;
+                lose.innerHTML="Perdidas: "+loseNum
+            }else{
+                winsNum++;
+                wins.innerHTML="Ganadas:"+winsNum;
+            }           
+        }
+        function juegoPapel(numR){
+            
+            if(numR==select){
+                empateNum++;
+                empa.innerHTML="Empate: "+empateNum;
+            }else if(numR==2){
+                loseNum++;
+                lose.innerHTML="Perdidas: "+loseNum;
+            }else{
+                winsNum++;
+                wins.innerHTML="Ganadas:"+winsNum;
+            }           
+        }
+        function juegoTijera(numR){
+            
+            if(numR==select){
+                empateNum++;
+                empa.innerHTML="Empate: "+empateNum;
+            }else if(numR==0){
+                loseNum++;
+                lose.innerHTML="Perdidas: "+loseNum
+            }else{
+                winsNum++;
+                wins.innerHTML="Ganadas:"+winsNum;
+            }           
+        }
+
+        function rival(numR){
+            if(numR==0){
+                var imgRival = document.getElementById("rival").src= "imagenes/piedra.png";
+            }else if(numR==1){
+                var imgRival = document.getElementById("rival").src= "imagenes/papel.png";
+            }else if(numR==2){
+                var imgRival = document.getElementById("rival").src= "imagenes/tijera.png";
+            }
+        }
+        
+    </script>
+   
+</body>
+</html>
