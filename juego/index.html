@@ -47,7 +47,7 @@
         var empateNum=0;
         imgPiedra.addEventListener("click",()=>{
             var num=Math.floor(Math.random()*3)
-            select=1;
+            select=0;
             juegoPiedra(num)
             rival(num);
         })
@@ -59,7 +59,7 @@
         })
         imgTijera.addEventListener("click",()=>{
             var num=Math.floor(Math.random()*3)
-            select=1;
+            select=2;
             juegoTijera(num)
             rival(num);
         })
