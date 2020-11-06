@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="texto" id="num1" placeholder="Ingresa los grados centigrados a convertir">
+	
+	<button type="button" id="btn1">click</button>
+	<script>
+	var btn = document.getElementById("btn1");
+	btn.addEventListener("click",()=>{
+		var a =document.getElementById("num1").value;
+        console.log(a);
+		var toF= ( parseInt(a) * (9/5)) + 32 ;
+	window.alert(a+`degrees to `+toF+` farenheit`);
+	})
+</script>
+</body>
+</html>
