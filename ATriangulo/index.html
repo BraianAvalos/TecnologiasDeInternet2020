@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="texto" id="num1" placeholder="ingresa la base">
+	<input type="number" name="texto" id="num2" placeholder="ingresa la altura">
+	<button type="button" id="btn1">click</button>
+	<script>
+	var btn = document.getElementById("btn1");
+	btn.addEventListener("click",()=>{
+		var a =document.getElementById("num1").value;
+		var b =document.getElementById("num2").value;
+		var area= (parseInt(a)*parseInt(b))/2;
+	alert("El area del triangulo es "+area);
+	})
+	
+	</script>
+</body>
+</html>
