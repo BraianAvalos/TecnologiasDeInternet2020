@@ -1,0 +1,9 @@
+¿Para qué sirve JS?
+Se utiliza para crear paginas web dinamicas
+
+¿Que significa json?
+Java Script Object Notation
+
+Mencione 2 cosas que se pueden hacer con el inspector de elementos
+ -Ver el codigo de la pagina
+ -Depuracion
